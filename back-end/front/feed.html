@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feed</title>
+        <link rel="icon" href="images/logo.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <link rel="stylesheet" href="feed.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href=""><img id="cjr-logo" src="images/cjr logo.svg" alt="cjr logo"></a>
+            <ul class="nav-content">
+                <strong><a class="name-nave" id="perfil-logado"><span id="nome"></a></strong>
+                <a id="perfil-logado2"> <img id="imagemUser" src="images/Image icon.svg" class="profile-nave"></a>
+                <a> <img src="images/saida.svg" class="sair-icon" id="botão-sair"> </a>
+                <a href="index.html"><li id="criar-conta">Criar Conta</li></a>
+                <a href="index.html"><li id="entrar-conta">Entrar</li></a>
+            </ul>
+        </nav>
+
+        <main>
+
+            <!-- The Modal -->
+            <div class="modal-overlay">
+                <div class="publish-content">
+    
+                    <textarea name="markdown" id="md" cols="30" rows="10"></textarea>
+    
+                    <div class="publish-buttons">
+                        <h4 class="cancelar-publish" id="cancelar" onclick="fechaModal(event)">Cancelar</h4>
+                        <h4 class="confirmar-publish" id="enviar">Publicar</h4>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div id="posts" class="feed-content">
+                <div class="feed-nav">
+                    <a href=""><img id="back-icon" src="images/back icon.svg" alt="back icon"></a>
+                    <!-- Trigger to the Modal Content -->
+                    <h4 class="feed-publicar-button" id="publicar" onclick="postarModal(event)">Publicar</h4>
+                </div>
+            </div>
+
+        </main>
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+        <script src="feed.js"></script>
+    </body>
+</html>

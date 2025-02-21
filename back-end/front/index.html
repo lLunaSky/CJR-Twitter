@@ -1,0 +1,95 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="images/logo.png" type="image/png">
+        <title> CJR </title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <form id="logini">
+            <img id="loginimg" src="images/login.svg">
+
+            <label id="imgini" class="picture" for="picture__input" tabIndex="0">
+            <span class="picture__image">
+                <img id="image" src="images/addimg.png" class="picture__img">
+            </span>
+            </label>
+            <input type="file" name="picture__input" id="picture__input" accept=".jpg, .png, .svg .jpeg">
+            <text id="imgerro">O arquivo deve ser menor que 45kb!</text>
+
+            <h3>Entre na sua conta CJR</h3>
+            <input id="emini" type="email" name="email" placeholder="Email entrar/registrar" />
+                <div class="carta" id="cartaid">
+                    <div class="abre"></div>
+                    <div class="abref"></div>
+                    <div class="corpo3"></div>
+                </div>
+                <text id="emerro">Digite um email valido!</text>
+                <text id="emerro2">E-mail já cadastrado!</text>
+
+            <input id="pasini" type="password" name="Senha" placeholder="Senha..."/>
+                <div class="cadeado" id="cadeadoid">
+                    <div class="arco"></div>
+                    <div class="arcov"></div>
+                    <div class="corpo"></div>
+                    <div class="caixa"></div>
+                </div>
+                <div>
+                <input type="checkbox" id="checkSen" placeholder="Senha...">
+                <label for="checkSen">Mostrar senha</label>
+                </div>
+                <text id="senerro">Digite uma senha valida!</text>
+                <text id="esqueci">Senha incorreta!</text>
+
+            <fieldset id="regini">
+                <input id="nomeini" type="text" name="nome" placeholder="Seu nome" />
+                    <div class="busto" id="bustoid">
+                        <div class="cabeca"></div>
+                        <div class="corpo2"></div>
+                        <div class="caixa"></div>
+                    </div>
+
+                    <text id="nomerro">Digite um nome valido!</text>
+                <select id="Idgenero">
+                    <option value="">Gênero...</option>
+                    <option value="Femin">Mulher</option>
+                    <option value="Mscln">Homem</option>
+                    <option value="Nabin">Não Binário</option>
+                </select>
+                    <text id="generro">Por favor escolha um genero!</text>
+
+                <select id="nucleoini">
+                    <option value="">Nucleo...</option>
+                    <option value="BOPE">BOPE</option>
+                    <option value="NDP">NDP</option>
+                    <option value="NUT">NUT</option>
+                    <option value="NIP">NIP</option>
+                    <option value="NOE">NOE</option>
+                    <option value="Convidado">Convidado</option>
+                </select>
+                <select id="cargoini">
+                    <option value="">cargo...</option>
+                    <option value="Presidente">Presidente</option>
+                    <option value="Lider de nucleo">Lider de nucleo</option>
+                    <option value="ordenador(a)">Cordenador(a)</option>
+                    <option value="Acessor(a)">Acessor(a)</option>
+                    <option value="Diretor(a)">Diretor(a)</option>
+                    <option value="trainee">trainee</option>
+                    <option value="Convidado">Convidado</option>
+                </select>
+                <div class="martelo" id="marteloid">
+                    <div class="cabeca2"></div>
+                    <div class="aste"></div>
+                </div>
+                <text id="carerro">Digite um cargo valido!</text>
+            </fieldset>
+            <input id="enviarform" type="submit" name="acao" value="Entrar" />
+            <input id="abrirform" type="button" name="acao" value="Registrar" />
+            <a id="esqueci2" href="senha.html">Esqueci a senha!</a>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>

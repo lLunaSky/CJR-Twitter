@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <head>
+            <!--titulo da pag, icone da pag e conexão do css-->
+            <title>Cadastro teste</title>
+            <link rel="icon" href="/images/cjr logo.svg">
+            <link rel="stylesheet" href="">
+        </head>
+    </head>
+
+    <body>
+        <main>
+            <form className="login-form">
+                <label id="email" for="email">Email:</label><br>
+                <input className="login-info" id="email-input" onChange={this.handleEmailInput} type="email" name="new email" placeholder="Digite o email"><br>
+
+                <label id="senha" for="senha">Password:</label><br>
+                <input className="login-info" id="senha-input" onChange={this.handleSenhaInput} type="password" name="new senha" placeholder="Digite a senha"><br>
+
+                <label id="nome" for="nome">Nome:</label><br>
+                <input className="login-info" id="nome-input" onChange={this.handleNomeInput} type="text" name="new nome" placeholder="Digite o nome"><br>
+
+                <label id="genero" for="genero">Genero:</label><br>
+                <input className="login-info" id="genero-input" onChange={this.handleGeneroInput} type="text" name="new genero" placeholder="Digite o genero"><br>
+
+                <label id="cargo" for="cargo">Cargo:</label><br>
+                <input className="login-info" id="cargo-input" onChange={this.handleCargoInput} type="text" name="new cargo" placeholder="Digite o cargo"><br>
+
+                <label id="nucleo" for="nucleo">Nucleo:</label><br>
+                <input className="login-info" id="nucleo-input" onChange={this.handleNucleoInput} type="text" name="new nucleo" placeholder="Digite o nucleo"><br>
+
+                <button className="login-button" id="cadastrar-button" type="submit" onClick={this.clickLogin}>Cadastrar</button>
+            </form>
+        </main>
+        <script src="teste.js"></script>
+    </body>
+</html>

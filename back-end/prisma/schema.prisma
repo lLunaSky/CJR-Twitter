@@ -1,0 +1,63 @@
+//  Arquivo de esquema do Prisma
+//  Documento: https://pris.ly/d/prisma-schema
+
+//npx prisma studio // abre no navegar o prisma studio
+
+//npx prisma migrate dev // aplicar alterações desse codigo 
+
+//  BASE
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+//  TABELAS DO BANCO DE DADOS
+model Usuario{
+  id Int @id @default(autoincrement())
+  email String @unique
+  senha String
+  nome String
+  genero String 
+  data DateTime @default(now())
+  cargo String 
+  nucleo Nucleo @relation(fields: [nucleoID], references: [id])
+  nucleoID Int 
+  imagem String? 
+  admin Boolean @default(false)
+  posts Post[]
+  coments Coments[]
+}
+
+//Post
+model Post{
+  id Int @id @default(autoincrement())
+  user Usuario? @relation(fields: [user_id], references: [id])
+  user_id Int?
+  content String
+  updated_at DateTime @updatedAt
+  created_at DateTime @default(now())
+  coments Coments[]
+}
+
+//Comentario
+model Coments{
+  id Int @id @default(autoincrement())
+  user Usuario? @relation(fields: [user_id], references: [id])
+  user_id Int?
+  post Post @relation(fields: [post_id], references: [id])
+  post_id Int 
+  content String
+}
+
+//Cargo
+//Relação N:1 ainda não estabelecida
+model Nucleo{
+  id Int @id @default(autoincrement())
+  nome String @unique
+  created_at DateTime @default(now())
+  useres Usuario[] 
+}

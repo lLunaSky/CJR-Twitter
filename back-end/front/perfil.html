@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+    <nav>
+        <a href="http://localhost:3000/feed.html"><img id="cjr-logo" src="images/cjr logo.svg" alt="cjr logo"></a>
+        <ul class="nav-content">
+            <strong><a class="name-nave" id="perfil-logado"><span id="nome-nave"></a></strong>
+            <a id="perfil-logado2"> <img id="imagemUser" src="images/Image icon.svg" class="profile-nave"></a>
+            <a> <img src="images/saida.svg" class="sair-icon" id="botão-sair"> </a>
+            <a href="index.html"><li id="criar-conta">Criar Conta</li></a>
+            <a href="index.html"><li id="entrar-conta">Entrar</li></a>
+        </ul>
+    </nav>
+
+    <div class = "container">
+        <div class = "card">
+            <img id="imagemlogin" src="login.svg" class="profile-img">
+            <div class = "container-text">
+                <h1 class="name"><span id="nome"></span></span></h1>
+                <h3 class="desc">
+                    <img src="images/casa.svg"  class="address-icon"> <span id="cargo"></span></span> <b><span id="nucleo"></span></span></b> <br>
+                    <img src="images/envelope.svg"  class="address-icon"> <span id="email"></span></span>
+                </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="publicacao">
+        <!-- The Modal -->
+        <div class="modal-overlay">
+            <div class="publish-content">
+
+                <textarea name="markdown" id="md" cols="30" rows="10"></textarea>
+
+                <div class="publish-buttons">
+                    <h4 class="cancelar-publish" id="cancelar" onclick="fechaModal(event)">Cancelar</h4>
+                    <h4 class="confirmar-publish" id="enviar">Publicar</h4>
+                </div>
+
+            </div>
+        </div>
+            <div id="posts" class="feed-content">
+                <div class="feed-nav">
+                    <a href=""><img id="back-icon" src="images/back icon.svg" alt="back icon"></a>
+                    <!-- Trigger to the Modal Content -->
+                    <h4 class="feed-publicar-button" id="publicar" onclick="postarModal(event)">Publicar</h4>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="perfil.js"></script>
+</body>
+</html>
